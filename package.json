@@ -10,9 +10,14 @@
         "sh",
         "./configure.sh",
         "$cur__install",
-        "#{conf-ios.etc / 'ios.config'}"
+        "#{conf-ios.install / 'etc' / 'ios.config'}"
       ],
-      ["make", "world", "opt", "install"],
+      [
+        "make",
+        "world",
+        "opt",
+        "install"
+      ],
       [
         "sh",
         "./install.sh",
