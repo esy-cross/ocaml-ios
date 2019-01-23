@@ -1,0 +1,32 @@
+{
+  "name": "ocaml-ios",
+  "description": "OCaml cross-compiler for 64-bit x86 and ARM iOS targets",
+  "version": "4.4.2",
+  "source": "https://github.com/esy-cross/ocaml/archive/1512603f6c824a12382ac24fcbbc08145f679b76.zip#7cc5cb6738cbc060bee0f4d331edc6dedf18bf42",
+  "override": {
+    "buildsInSource": true,
+    "build": [
+      [
+        "sh",
+        "./configure.sh",
+        "$cur__install",
+        "#{conf-ios.etc / 'ios.config'}"
+      ],
+      ["make", "world", "opt", "install"],
+      [
+        "sh",
+        "./install.sh",
+        "#{@opam/ocamlfind.lib / 'ocaml'}",
+        "$cur__install"
+      ]
+    ]
+  },
+  "dependencies": {
+    "@esy-ocaml/substs": "*",
+    "@opam/ocamlfind": "*",
+    "conf-ios": "*"
+  },
+  "peerDependencies": {
+    "ocaml": "*"
+  }
+}
