@@ -24,14 +24,14 @@
         "#{@opam/ocamlfind.lib / 'ocaml'}",
         "$cur__install"
       ]
-    ]
-  },
-  "dependencies": {
-    "@esy-ocaml/substs": "*",
-    "@opam/ocamlfind": "*",
-    "conf-ios": "*"
-  },
-  "peerDependencies": {
-    "ocaml": "*"
+    ],
+    "dependencies": {
+      "@esy-ocaml/substs": "*",
+      "@opam/ocamlfind": "*",
+      "conf-ios": "*"
+    },
+    "peerDependencies": {
+      "ocaml": "*"
+    }
   }
 }
